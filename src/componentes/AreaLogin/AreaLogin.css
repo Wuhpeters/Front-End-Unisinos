@@ -1,0 +1,33 @@
+.login-texto {
+    margin: 24px 0;
+}
+
+.login-texto label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 24px;
+}
+
+.login-texto input {
+    background-color: #FFF;
+    width: 100%;
+    border: none;
+    font-size: 24px;
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+.textoHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.textoHeader h1 {
+    color: #2d908d;
+    font-size: 50px;
+}
+
+.textoHeader h2 {
+    color: #4c7f8a;
+}
