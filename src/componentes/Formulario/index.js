@@ -3,16 +3,18 @@ import AreaLogin from '../AreaLogin'
 import Botao from '../Botao'
 import './Formulario.css'
 
-const Formulario = () => {
+const Formulario = (props) => {
 
     const [email, setEmail] = useState('')
     const [senha, setSenha] = useState('')
 
     const novoCadastro = (evento) => {
-        evento.preventDefault()
-        console.log("cadastradooooo /// ", email, senha )
+        evento.preventDefault();
+        props.cadastros({
+            email,
+            senha
+        })
     }
-
 
     return (
         <section className='formulario'>
@@ -40,7 +42,7 @@ const Formulario = () => {
                     permissao={true} />
 
                 <Botao>Cadastrar</Botao>
-                
+
             </form>
         </section>
     )
