@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  background: linear-gradient(to bottom, #f2f7fa, #2d908d);
+  height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.header {
+  height: 120px;
+  display: flex;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style: none;
+  align-items: center;
+  height: 80px;
+}
+
+.container {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1080px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@media (min-width: 730px) {
+  .dots-icon {
+    display: none;
+  }
+}
+
+@media (max-width: 730px) {
+  .menu {
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    flex-wrap: initial;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: #2d908d;
+    height: 100%;
+    z-index: 1;
+    box-shadow: -3px 0px 11px 13px rgba(0, 0, 0, 0.4);
+    width: 320px;
+    transform: translateX(110%);
+    transition: transform 0.5s ease;
+  }
+
+  .menu-item {
+    height: auto;
+  }
+
+  .header-container {
+    justify-content: flex-end;
+  }
+}
+
+.dots-icon {
+  height: 40px;
+  width: 40px;
+  position: relative;
+  z-index: 90;
+  border-radius: 50%;
+}
+
+.menu-control {
+  display: none;
+}
+
+.menu-control:checked+.menu {
+  transform: translateX(0);
+}
+
+.botao-redondo {
+  display: inline-block;
+  border-radius: 50%;
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  margin: 10px;
+}
+
+.botao-redondo img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
